@@ -10,7 +10,7 @@ DISABLED_SECRET_FORMAT = ['Cleartext-Password',
                           'SSHA-Password',
                           'Crypt-Password']
 
-RADCHECK_SECRET_VALIDATIONS = { 'regexp_lowercase'  : r'[a-z]',
+RADCHECK_SECRET_VALIDATORS = { 'regexp_lowercase'  : r'[a-z]',
                                 'regexp_uppercase' : r'[A-Z]',
                                 'regexp_number' : r'[0-9]',
                                 'regexp_special' : r'[\!\%\-_+=\[\]\{\}\:\,\.\?\<\>\(\)\;]',

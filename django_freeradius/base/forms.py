@@ -25,7 +25,7 @@ class AbstractRadiusCheckAdminForm(forms.ModelForm):
     def clean_new_value(self):
         # if something else is required to validates your data
         # according to European GDPR
-        for regexp in app_settings.RADCHECK_SECRET_VALIDATIONS:
+        for regexp in app_settings.RADCHECK_SECRET_VALIDATORS:
             if not re.findall(regexp, self.data['new_value']):
                 raise ValidationError('The secret must contains lowercase'
                                       ' and uppercase characters, '
